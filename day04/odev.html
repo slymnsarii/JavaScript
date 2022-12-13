@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="num1" />
+    <input type="text" id="num2" />
+
+    <select id="operation">
+      <option value="add">+</option>
+      <option value="subtract">-</option>
+      <option value="multiply">*</option>
+      <option value="divide">/</option>
+    </select>
+
+    <button id="calculateButton">Hesapla</button>
+
+    <label id="resultLabel"></label>
+
+    <script>
+      const num1Input = document.querySelector("#num1");
+      const num2Input = document.querySelector("#num2");
+      const operationSelect = document.querySelector("#operation");
+      const calculateButton = document.querySelector("#calculateButton");
+      const resultLabel = document.querySelector("#resultLabel");
+
+      calculateButton.addEventListener("click", () => {
+        const num1 = parseFloat(num1Input.value);
+        const num2 = parseFloat(num2Input.value);
+        const operation = operationSelect.value;
+
+        let result;
+        if (operation === "add") {
+          result = num1 + num2;
+        } else if (operation === "subtract") {
+          result = num1 - num2;
+        } else if (operation === "multiply") {
+          result = num1 * num2;
+        } else if (operation === "divide") {
+          result = num1 / num2;
+        }
+
+        resultLabel.textContent = result;
+      });
+    </script>
+  </body>
+</html>
