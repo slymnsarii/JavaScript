@@ -12,26 +12,18 @@
         firstName: "Ali",
         lastName: "Veli",
       };
-
-      //user = null;
-
-      let displayName = "";
-
-      /* IF METHOD
-      if(user===null || user===undefined){
-        displayName = "Anonymous";
-      }
-      else{
-        displayName = `${user.firstName} ${user.lastName}`; 
-      }
+      user = null;
+      //IF METHOD
+      /*
+      if (user === null || user === undefined) {
+        user = { firstName: "Anonymous", lastName: "" };
+      } 
       */
-
       // TERNARY METHOD
-      //displayName = user === null ||  user===undefined ? "Anonymous" : `${user.firstName} ${user.lastName}`
-
+      //user = user === null ||  user===undefined ? { firstName: "Anonymous", lastName: "" } : user
       //NULLISH
-      displayName = user ?? "Anonymous";
-
+      user = user ?? { firstName: "Anonymous", lastName: "" };
+      const displayName = `${user.firstName} ${user.lastName}`;
       console.log(displayName);
     </script>
   </body>
