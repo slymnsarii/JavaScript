@@ -7,6 +7,13 @@
     <title>Document</title>
 
     <style>
+      .baslik {
+        font-size: 3rem;
+        color: aquamarine;
+        padding: 1rem;
+        text-align: center;
+      }
+
       .red {
         color: red;
       }
@@ -14,18 +21,11 @@
       .blue {
         color: blue;
       }
-
-      .baslik {
-        font-size: 3rem;
-        color: aquamarine;
-        padding: 1rem;
-        text-align: center;
-      }
     </style>
   </head>
   <body>
     <h1 id="pageTitle"><em>Hello DOM</em></h1>
-    <p>
+    <p id="about">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum optio
       assumenda porro? Modi culpa harum eius alias at, libero earum, provident
       iste doloremque accusantium a ab facere ipsam, reprehenderit
@@ -40,6 +40,7 @@
 
       const aboutEl = document.querySelector("#about");
       aboutEl.classList.add("blue");
+      aboutEl.classList.add("red");
     </script>
   </body>
 </html>
